@@ -58,3 +58,8 @@
 //   girls.map((item) => item.age).reduce((sum, item) => sum + item) /
 //     girls.length,
 // ); //- так можна все в один рядок чи це робить кашу з коду? бо це перше що мені прийшло в голову коли почала робити це завдання (робила по прикладах з лекції м23)
+
+// Від ментора:
+// const ages = girls.map((item) => item.age);
+// const totalAge = ages.reduce((sum, age) => sum + age, 0);
+// const averageAge = totalAge / girls.length;
