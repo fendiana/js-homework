@@ -38,3 +38,31 @@
 // console.log(user1.abonentInfo);
 // console.log(user2.abonentInfo);
 // console.log(user3.abonentInfo);
+
+// Враховуючи коментарі викладача:
+
+// class Abonent {
+//   constructor(name, number) {
+//     this.name = name;
+//     this.number = number;
+//   }
+
+//   set phoneNum(value) {
+//     this.number = value;
+//   }
+
+//   get abonentInfo() {
+//     return `Name: ${this.name} Number: ${this.number}`;
+//   }
+// }
+
+// const user1 = new Abonent("Sam", "+123456789012");
+// const user2 = new Abonent("Paul", "+234567890123");
+// const user3 = new Abonent("Jack", "+345678901234");
+
+// console.log(user1.abonentInfo);
+// console.log(user2.abonentInfo);
+// console.log(user3.abonentInfo);
+
+// user1.phoneNum = "+380991112233";
+// console.log(user1.abonentInfo);
