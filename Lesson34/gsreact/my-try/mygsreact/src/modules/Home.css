@@ -1,3 +1,9 @@
 .block {
   padding: 40px;
 }
+
+.formInput {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}

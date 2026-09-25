@@ -1,0 +1,12 @@
+.accBlock {
+  padding: 40px;
+}
+
+.formLabel {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.accText {
+  padding-right: 5px;
+}

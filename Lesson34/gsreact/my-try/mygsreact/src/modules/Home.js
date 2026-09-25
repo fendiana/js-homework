@@ -1,18 +1,52 @@
 import React, { useState } from "react";
 import "./Home.css";
+import AccountCard from "./AccountCard";
+import RegistrationForm from "./RegistrationForm";
 
 const Home = () => {
-  const [value, useValue] = useState(0);
+  const [name, useName] = useState("");
+  const [city, useCity] = useState("");
+  const [email, useEmail] = useState("");
+  const [password, usePassword] = useState("");
+  const [acc, useAcc] = useState(false);
 
-  const Change = () => {
-    useValue(value + 1);
+  const HandleChangeName = (e) => {
+    useName(e.target.value);
+  };
+
+  const HandleChangeCity = (e) => {
+    useCity(e.target.value);
+  };
+
+  const HandleChangeEmail = (e) => {
+    useEmail(e.target.value);
+  };
+
+  const HandleChangePassword = (e) => {
+    usePassword(e.target.value);
+  };
+
+  const OnSubmitForm = () => {
+    useAcc(true);
   };
 
   return (
     <div className="block">
-      <p>Counter</p>
-      <p>{value}</p>
-      <button onClick={Change}>Click</button>
+      {acc ? (
+        <AccountCard name={name} city={city} email={email} />
+      ) : (
+        <RegistrationForm
+          handleChangeName={HandleChangeName}
+          handleChangeCity={HandleChangeCity}
+          handleChangeEmail={HandleChangeEmail}
+          handleChangePassword={HandleChangePassword}
+          onSubmitForm={OnSubmitForm}
+          name={name}
+          city={city}
+          email={email}
+          password={password}
+        />
+      )}
     </div>
   );
 };
